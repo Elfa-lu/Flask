@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<script>
+  		function checkNull(){
+			for(i=0;i<form.length;i++)
+			{
+				if(form.elements[i].value == ""){ 
+					alert("can not be null");
+					form.elements[i].focus();
+					return false;}
+			}
+  	  	}
+  	</script>
+
+</head>
+
+<body>
+	<h3>Log in or <a href="/registration">create a new account</a> </h3>
+    
+    <form action="/login" method="POST" onSubmit="checkNull()"> 
+        <div >
+            <input type="text"  name="username" placeholder="username">
+        </div>
+
+        <div>
+        	<input type="text"  name="password" placeholder="password">
+        </div>
+
+        <button type="submit">submit</button>
+    </form>
+</body>
