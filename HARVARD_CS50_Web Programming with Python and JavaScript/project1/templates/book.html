@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+	<h3>book reviews</h3>
+
+
+	<div>
+		<h4>GoodRead reviews</h4>
+		<h6>ratings_count: {{gr['ratings_count']}}</h6>
+		<h6>reviews_count: {{gr['reviews_count']}}</h6>
+		<h6>average_rating: {{gr['average_rating']}}</h6>
+	</div>
+
+
+	<div>
+		<h4>Website reviews</h4>
+		<h6>{{message}}</h6>
+		<h6>user: {{review['user']}}</h6>
+		<h6>rate: {{review['rate']}}</h6>
+		<h6>review: {{review['review']}}</h6>
+	</div>
+
+
+	{% for info_ in info %}
+	<div>
+		<h4>book info</h4>
+		<h6>isbn: {{info_['isbn']}}</h6>
+		<h6>title: {{info_['title']}}</h6>
+		<h6>author: {{info_['author']}}</h6>
+		<h6>year: {{info_['year']}}</h6>
+	</div>
+	{% endfor %}
+
+</body>

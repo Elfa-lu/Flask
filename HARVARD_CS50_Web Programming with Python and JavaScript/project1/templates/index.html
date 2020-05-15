@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+  		function checkNull(){
+			for(i=0;i<form.length;i++)
+			{
+				if(form.elements[i].value == ""){ 
+					alert("can not be null");
+					form.elements[i].focus();
+					return false;}
+			}
+  	  	}
+  	</script>
+</head>
+
+<body>
+	<h2>Search for a book!</h2>
+    
+    <!--when user submit the form, direct to /search-->
+    <form action="/results" method="POST" onSubmit="checkNull()"> 
+        <div >
+            <input type="text" name="book" placeholder="ISBN, Title or Author">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+    <div>
+		<a href="/">Log out</a>
+	</div>
+</body>
