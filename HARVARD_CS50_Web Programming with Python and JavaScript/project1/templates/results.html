@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+	<h3>search result</h3>
+
+	{% for result in results %}
+		<div>
+				<h4>{{result['title']}}</h4>
+				<h6>{{result['author']}}</h6>
+				<h6>{{result['year']}}</h6>
+				<h6>{{result['isbn']}}</h6>
+		</div>
+
+		<div>
+			<a href="/book/{{result['isbn']}}">Go to book page</a>
+		</div>
+
+	{% endfor %}
+</body>
